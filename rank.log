@@ -1,0 +1,254 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+19/05/07 11:06:47 INFO SparkContext: Running Spark version 2.4.1
+19/05/07 11:06:47 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+19/05/07 11:06:47 INFO SparkContext: Submitted application: MongoSparkConnectorIntro
+19/05/07 11:06:48 INFO SecurityManager: Changing view acls to: nbovilla
+19/05/07 11:06:48 INFO SecurityManager: Changing modify acls to: nbovilla
+19/05/07 11:06:48 INFO SecurityManager: Changing view acls groups to: 
+19/05/07 11:06:48 INFO SecurityManager: Changing modify acls groups to: 
+19/05/07 11:06:48 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(nbovilla); groups with view permissions: Set(); users  with modify permissions: Set(nbovilla); groups with modify permissions: Set()
+19/05/07 11:06:48 INFO Utils: Successfully started service 'sparkDriver' on port 62364.
+19/05/07 11:06:48 INFO SparkEnv: Registering MapOutputTracker
+19/05/07 11:06:48 INFO SparkEnv: Registering BlockManagerMaster
+19/05/07 11:06:48 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+19/05/07 11:06:48 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+19/05/07 11:06:48 INFO DiskBlockManager: Created local directory at /private/var/folders/v6/zyq3_4l946zd3cxx_706q0jjcvztwd/T/blockmgr-566dc7d9-18db-4df2-a862-ba4ba564fdfb
+19/05/07 11:06:48 INFO MemoryStore: MemoryStore started with capacity 2004.6 MB
+19/05/07 11:06:48 INFO SparkEnv: Registering OutputCommitCoordinator
+19/05/07 11:06:49 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+19/05/07 11:06:49 INFO SparkUI: Bound SparkUI to 0.0.0.0, and started at http://10.0.0.151:4040
+19/05/07 11:06:49 INFO Executor: Starting executor ID driver on host localhost
+19/05/07 11:06:49 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 62366.
+19/05/07 11:06:49 INFO NettyBlockTransferService: Server created on 10.0.0.151:62366
+19/05/07 11:06:49 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+19/05/07 11:06:49 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 10.0.0.151, 62366, None)
+19/05/07 11:06:49 INFO BlockManagerMasterEndpoint: Registering block manager 10.0.0.151:62366 with 2004.6 MB RAM, BlockManagerId(driver, 10.0.0.151, 62366, None)
+19/05/07 11:06:49 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 10.0.0.151, 62366, None)
+19/05/07 11:06:49 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 10.0.0.151, 62366, None)
+19/05/07 11:06:50 INFO SharedState: Setting hive.metastore.warehouse.dir ('null') to the value of spark.sql.warehouse.dir ('file:/Users/nbovilla/git/rank/spark-warehouse').
+19/05/07 11:06:50 INFO SharedState: Warehouse path is 'file:/Users/nbovilla/git/rank/spark-warehouse'.
+19/05/07 11:06:51 INFO StateStoreCoordinatorRef: Registered StateStoreCoordinator endpoint
+19/05/07 11:06:51 WARN SparkSession$Builder: Using an existing SparkSession; some configuration may not take effect.
+19/05/07 11:06:51 INFO MemoryStore: Block broadcast_0 stored as values in memory (estimated size 288.0 B, free 2004.6 MB)
+19/05/07 11:06:51 INFO MemoryStore: Block broadcast_0_piece0 stored as bytes in memory (estimated size 439.0 B, free 2004.6 MB)
+19/05/07 11:06:51 INFO BlockManagerInfo: Added broadcast_0_piece0 in memory on 10.0.0.151:62366 (size: 439.0 B, free: 2004.6 MB)
+19/05/07 11:06:51 INFO SparkContext: Created broadcast 0 from broadcast at MongoSpark.scala:542
+19/05/07 11:06:52 INFO cluster: Cluster created with settings {hosts=[3.14.69.242:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+19/05/07 11:06:52 INFO cluster: Cluster description not yet available. Waiting for 30000 ms before timing out
+19/05/07 11:06:52 INFO connection: Opened connection [connectionId{localValue:1, serverValue:8}] to 3.14.69.242:27017
+19/05/07 11:06:52 INFO cluster: Monitor thread successfully connected to server with description ServerDescription{address=3.14.69.242:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=39253600}
+19/05/07 11:06:52 INFO MongoClientCache: Creating MongoClient: [3.14.69.242:27017]
+19/05/07 11:06:53 INFO connection: Opened connection [connectionId{localValue:2, serverValue:9}] to 3.14.69.242:27017
+19/05/07 11:06:53 INFO SparkContext: Starting job: collect at AppWorking.java:104
+19/05/07 11:06:53 INFO DAGScheduler: Registering RDD 1 (mapToPair at AppWorking.java:38)
+19/05/07 11:06:53 INFO DAGScheduler: Got job 0 (collect at AppWorking.java:104) with 3 output partitions
+19/05/07 11:06:53 INFO DAGScheduler: Final stage: ResultStage 1 (collect at AppWorking.java:104)
+19/05/07 11:06:53 INFO DAGScheduler: Parents of final stage: List(ShuffleMapStage 0)
+19/05/07 11:06:53 INFO DAGScheduler: Missing parents: List(ShuffleMapStage 0)
+19/05/07 11:06:53 INFO DAGScheduler: Submitting ShuffleMapStage 0 (MapPartitionsRDD[1] at mapToPair at AppWorking.java:38), which has no missing parents
+19/05/07 11:06:53 INFO MemoryStore: Block broadcast_1 stored as values in memory (estimated size 7.1 KB, free 2004.6 MB)
+19/05/07 11:06:53 INFO MemoryStore: Block broadcast_1_piece0 stored as bytes in memory (estimated size 3.8 KB, free 2004.6 MB)
+19/05/07 11:06:53 INFO BlockManagerInfo: Added broadcast_1_piece0 in memory on 10.0.0.151:62366 (size: 3.8 KB, free: 2004.6 MB)
+19/05/07 11:06:53 INFO SparkContext: Created broadcast 1 from broadcast at DAGScheduler.scala:1161
+19/05/07 11:06:53 INFO DAGScheduler: Submitting 3 missing tasks from ShuffleMapStage 0 (MapPartitionsRDD[1] at mapToPair at AppWorking.java:38) (first 15 tasks are for partitions Vector(0, 1, 2))
+19/05/07 11:06:53 INFO TaskSchedulerImpl: Adding task set 0.0 with 3 tasks
+19/05/07 11:06:53 INFO TaskSetManager: Starting task 0.0 in stage 0.0 (TID 0, localhost, executor driver, partition 0, ANY, 7498 bytes)
+19/05/07 11:06:53 INFO Executor: Running task 0.0 in stage 0.0 (TID 0)
+19/05/07 11:06:59 INFO Executor: Finished task 0.0 in stage 0.0 (TID 0). 944 bytes result sent to driver
+19/05/07 11:06:59 INFO TaskSetManager: Starting task 1.0 in stage 0.0 (TID 1, localhost, executor driver, partition 1, ANY, 7516 bytes)
+19/05/07 11:06:59 INFO TaskSetManager: Finished task 0.0 in stage 0.0 (TID 0) in 5436 ms on localhost (executor driver) (1/3)
+19/05/07 11:06:59 INFO Executor: Running task 1.0 in stage 0.0 (TID 1)
+19/05/07 11:07:17 INFO Executor: Finished task 1.0 in stage 0.0 (TID 1). 901 bytes result sent to driver
+19/05/07 11:07:17 INFO TaskSetManager: Starting task 2.0 in stage 0.0 (TID 2, localhost, executor driver, partition 2, ANY, 7499 bytes)
+19/05/07 11:07:17 INFO TaskSetManager: Finished task 1.0 in stage 0.0 (TID 1) in 18458 ms on localhost (executor driver) (2/3)
+19/05/07 11:07:17 INFO Executor: Running task 2.0 in stage 0.0 (TID 2)
+19/05/07 11:07:19 INFO Executor: Finished task 2.0 in stage 0.0 (TID 2). 858 bytes result sent to driver
+19/05/07 11:07:19 INFO TaskSetManager: Finished task 2.0 in stage 0.0 (TID 2) in 1597 ms on localhost (executor driver) (3/3)
+19/05/07 11:07:19 INFO TaskSchedulerImpl: Removed TaskSet 0.0, whose tasks have all completed, from pool 
+19/05/07 11:07:19 INFO DAGScheduler: ShuffleMapStage 0 (mapToPair at AppWorking.java:38) finished in 25.599 s
+19/05/07 11:07:19 INFO DAGScheduler: looking for newly runnable stages
+19/05/07 11:07:19 INFO DAGScheduler: running: Set()
+19/05/07 11:07:19 INFO DAGScheduler: waiting: Set(ResultStage 1)
+19/05/07 11:07:19 INFO DAGScheduler: failed: Set()
+19/05/07 11:07:19 INFO DAGScheduler: Submitting ResultStage 1 (MapPartitionsRDD[3] at groupByKey at AppWorking.java:42), which has no missing parents
+19/05/07 11:07:19 INFO MemoryStore: Block broadcast_2 stored as values in memory (estimated size 8.4 KB, free 2004.6 MB)
+19/05/07 11:07:19 INFO MemoryStore: Block broadcast_2_piece0 stored as bytes in memory (estimated size 4.4 KB, free 2004.6 MB)
+19/05/07 11:07:19 INFO BlockManagerInfo: Added broadcast_2_piece0 in memory on 10.0.0.151:62366 (size: 4.4 KB, free: 2004.6 MB)
+19/05/07 11:07:19 INFO SparkContext: Created broadcast 2 from broadcast at DAGScheduler.scala:1161
+19/05/07 11:07:19 INFO DAGScheduler: Submitting 3 missing tasks from ResultStage 1 (MapPartitionsRDD[3] at groupByKey at AppWorking.java:42) (first 15 tasks are for partitions Vector(0, 1, 2))
+19/05/07 11:07:19 INFO TaskSchedulerImpl: Adding task set 1.0 with 3 tasks
+19/05/07 11:07:19 INFO TaskSetManager: Starting task 0.0 in stage 1.0 (TID 3, localhost, executor driver, partition 0, ANY, 7141 bytes)
+19/05/07 11:07:19 INFO Executor: Running task 0.0 in stage 1.0 (TID 3)
+19/05/07 11:07:19 INFO ShuffleBlockFetcherIterator: Getting 3 non-empty blocks including 3 local blocks and 0 remote blocks
+19/05/07 11:07:19 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 13 ms
+19/05/07 11:07:26 INFO MongoClientCache: Closing MongoClient: [3.14.69.242:27017]
+19/05/07 11:07:26 INFO connection: Closed connection [connectionId{localValue:2, serverValue:9}] to 3.14.69.242:27017 because the pool has been closed.
+19/05/07 11:07:26 INFO BlockManagerInfo: Removed broadcast_1_piece0 on 10.0.0.151:62366 in memory (size: 3.8 KB, free: 2004.6 MB)
+19/05/07 11:07:27 INFO MemoryStore: Block taskresult_3 stored as bytes in memory (estimated size 34.3 MB, free 1970.3 MB)
+19/05/07 11:07:27 INFO BlockManagerInfo: Added taskresult_3 in memory on 10.0.0.151:62366 (size: 34.3 MB, free: 1970.3 MB)
+19/05/07 11:07:27 INFO Executor: Finished task 0.0 in stage 1.0 (TID 3). 35954827 bytes result sent via BlockManager)
+19/05/07 11:07:27 INFO TaskSetManager: Starting task 1.0 in stage 1.0 (TID 4, localhost, executor driver, partition 1, ANY, 7141 bytes)
+19/05/07 11:07:27 INFO Executor: Running task 1.0 in stage 1.0 (TID 4)
+19/05/07 11:07:27 INFO ShuffleBlockFetcherIterator: Getting 3 non-empty blocks including 3 local blocks and 0 remote blocks
+19/05/07 11:07:27 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 2 ms
+19/05/07 11:07:27 INFO TransportClientFactory: Successfully created connection to /10.0.0.151:62366 after 71 ms (0 ms spent in bootstraps)
+19/05/07 11:07:31 INFO TaskSetManager: Finished task 0.0 in stage 1.0 (TID 3) in 12508 ms on localhost (executor driver) (1/3)
+19/05/07 11:07:31 INFO BlockManagerInfo: Removed taskresult_3 on 10.0.0.151:62366 in memory (size: 34.3 MB, free: 2004.6 MB)
+19/05/07 11:07:35 INFO MemoryStore: Block taskresult_4 stored as bytes in memory (estimated size 34.3 MB, free 1970.2 MB)
+19/05/07 11:07:35 INFO BlockManagerInfo: Added taskresult_4 in memory on 10.0.0.151:62366 (size: 34.3 MB, free: 1970.3 MB)
+19/05/07 11:07:35 INFO Executor: Finished task 1.0 in stage 1.0 (TID 4). 36011516 bytes result sent via BlockManager)
+19/05/07 11:07:35 INFO TaskSetManager: Starting task 2.0 in stage 1.0 (TID 5, localhost, executor driver, partition 2, ANY, 7141 bytes)
+19/05/07 11:07:35 INFO Executor: Running task 2.0 in stage 1.0 (TID 5)
+19/05/07 11:07:35 INFO ShuffleBlockFetcherIterator: Getting 3 non-empty blocks including 3 local blocks and 0 remote blocks
+19/05/07 11:07:35 INFO ShuffleBlockFetcherIterator: Started 0 remote fetches in 1 ms
+19/05/07 11:07:38 INFO TaskSetManager: Finished task 1.0 in stage 1.0 (TID 4) in 11670 ms on localhost (executor driver) (2/3)
+19/05/07 11:07:38 INFO BlockManagerInfo: Removed taskresult_4 on 10.0.0.151:62366 in memory (size: 34.3 MB, free: 2004.6 MB)
+19/05/07 11:07:43 INFO MemoryStore: Block taskresult_5 stored as bytes in memory (estimated size 34.2 MB, free 1970.4 MB)
+19/05/07 11:07:43 INFO BlockManagerInfo: Added taskresult_5 in memory on 10.0.0.151:62366 (size: 34.2 MB, free: 1970.4 MB)
+19/05/07 11:07:43 INFO Executor: Finished task 2.0 in stage 1.0 (TID 5). 35891239 bytes result sent via BlockManager)
+19/05/07 11:07:47 INFO TaskSetManager: Finished task 2.0 in stage 1.0 (TID 5) in 12093 ms on localhost (executor driver) (3/3)
+19/05/07 11:07:47 INFO TaskSchedulerImpl: Removed TaskSet 1.0, whose tasks have all completed, from pool 
+19/05/07 11:07:47 INFO BlockManagerInfo: Removed taskresult_5 on 10.0.0.151:62366 in memory (size: 34.2 MB, free: 2004.6 MB)
+19/05/07 11:07:47 INFO DAGScheduler: ResultStage 1 (collect at AppWorking.java:104) finished in 28.070 s
+19/05/07 11:07:47 INFO DAGScheduler: Job 0 finished: collect at AppWorking.java:104, took 53.797208 s
+-------------400000
+19/05/07 11:07:47 INFO SparkContext: Starting job: foreachPartition at MongoSpark.scala:117
+19/05/07 11:07:47 INFO DAGScheduler: Got job 1 (foreachPartition at MongoSpark.scala:117) with 1 output partitions
+19/05/07 11:07:47 INFO DAGScheduler: Final stage: ResultStage 2 (foreachPartition at MongoSpark.scala:117)
+19/05/07 11:07:47 INFO DAGScheduler: Parents of final stage: List()
+19/05/07 11:07:47 INFO DAGScheduler: Missing parents: List()
+19/05/07 11:07:47 INFO DAGScheduler: Submitting ResultStage 2 (ParallelCollectionRDD[4] at parallelize at AppWorking.java:121), which has no missing parents
+19/05/07 11:07:47 INFO MemoryStore: Block broadcast_3 stored as values in memory (estimated size 3.7 KB, free 2004.6 MB)
+19/05/07 11:07:47 INFO MemoryStore: Block broadcast_3_piece0 stored as bytes in memory (estimated size 2.1 KB, free 2004.6 MB)
+19/05/07 11:07:47 INFO BlockManagerInfo: Added broadcast_3_piece0 in memory on 10.0.0.151:62366 (size: 2.1 KB, free: 2004.6 MB)
+19/05/07 11:07:47 INFO SparkContext: Created broadcast 3 from broadcast at DAGScheduler.scala:1161
+19/05/07 11:07:47 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 2 (ParallelCollectionRDD[4] at parallelize at AppWorking.java:121) (first 15 tasks are for partitions Vector(0))
+19/05/07 11:07:47 INFO TaskSchedulerImpl: Adding task set 2.0 with 1 tasks
+19/05/07 11:07:58 WARN TaskSetManager: Stage 2 contains a task of very large size (104048 KB). The maximum recommended task size is 100 KB.
+19/05/07 11:07:58 INFO TaskSetManager: Starting task 0.0 in stage 2.0 (TID 6, localhost, executor driver, partition 0, PROCESS_LOCAL, 106545904 bytes)
+19/05/07 11:07:58 INFO Executor: Running task 0.0 in stage 2.0 (TID 6)
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 10
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 33
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 34
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 48
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 28
+19/05/07 11:08:09 INFO BlockManagerInfo: Removed broadcast_0_piece0 on 10.0.0.151:62366 in memory (size: 439.0 B, free: 2004.6 MB)
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 38
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 19
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 26
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 12
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 9
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 25
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 46
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 17
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned shuffle 0
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 44
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 45
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 13
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 1
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 23
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 8
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 49
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 22
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 4
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 2
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 40
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 18
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 6
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 36
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 30
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 37
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 0
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 15
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 47
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 32
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 11
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 31
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 42
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 41
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 16
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 29
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 24
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 39
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 20
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 7
+19/05/07 11:08:09 INFO BlockManagerInfo: Removed broadcast_2_piece0 on 10.0.0.151:62366 in memory (size: 4.4 KB, free: 2004.6 MB)
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 21
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 27
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 5
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 43
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 35
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 14
+19/05/07 11:08:09 INFO ContextCleaner: Cleaned accumulator 3
+19/05/07 11:08:11 INFO cluster: Cluster created with settings {hosts=[3.14.69.242:27017], mode=SINGLE, requiredClusterType=UNKNOWN, serverSelectionTimeout='30000 ms', maxWaitQueueSize=500}
+19/05/07 11:08:11 INFO cluster: Cluster description not yet available. Waiting for 30000 ms before timing out
+19/05/07 11:08:12 INFO connection: Opened connection [connectionId{localValue:3, serverValue:10}] to 3.14.69.242:27017
+19/05/07 11:08:12 INFO cluster: Monitor thread successfully connected to server with description ServerDescription{address=3.14.69.242:27017, type=STANDALONE, state=CONNECTED, ok=true, version=ServerVersion{versionList=[4, 0, 9]}, minWireVersion=0, maxWireVersion=7, maxDocumentSize=16777216, logicalSessionTimeoutMinutes=30, roundTripTimeNanos=37684392}
+19/05/07 11:08:12 INFO MongoClientCache: Creating MongoClient: [3.14.69.242:27017]
+19/05/07 11:08:12 INFO connection: Opened connection [connectionId{localValue:4, serverValue:11}] to 3.14.69.242:27017
+19/05/07 11:09:56 INFO Executor: Finished task 0.0 in stage 2.0 (TID 6). 714 bytes result sent to driver
+19/05/07 11:09:56 INFO TaskSetManager: Finished task 0.0 in stage 2.0 (TID 6) in 129353 ms on localhost (executor driver) (1/1)
+19/05/07 11:09:56 INFO TaskSchedulerImpl: Removed TaskSet 2.0, whose tasks have all completed, from pool 
+19/05/07 11:09:56 INFO DAGScheduler: ResultStage 2 (foreachPartition at MongoSpark.scala:117) finished in 129.365 s
+19/05/07 11:09:56 INFO DAGScheduler: Job 1 finished: foreachPartition at MongoSpark.scala:117, took 129.368633 s
+19/05/07 11:09:56 INFO SparkContext: Starting job: collect at AppWorking.java:124
+19/05/07 11:09:56 INFO DAGScheduler: Got job 2 (collect at AppWorking.java:124) with 1 output partitions
+19/05/07 11:09:56 INFO DAGScheduler: Final stage: ResultStage 3 (collect at AppWorking.java:124)
+19/05/07 11:09:56 INFO DAGScheduler: Parents of final stage: List()
+19/05/07 11:09:56 INFO DAGScheduler: Missing parents: List()
+19/05/07 11:09:56 INFO DAGScheduler: Submitting ResultStage 3 (ParallelCollectionRDD[4] at parallelize at AppWorking.java:121), which has no missing parents
+19/05/07 11:09:56 INFO MemoryStore: Block broadcast_4 stored as values in memory (estimated size 2.2 KB, free 2004.6 MB)
+19/05/07 11:09:57 INFO MemoryStore: Block broadcast_4_piece0 stored as bytes in memory (estimated size 1343.0 B, free 2004.6 MB)
+19/05/07 11:09:57 INFO BlockManagerInfo: Added broadcast_4_piece0 in memory on 10.0.0.151:62366 (size: 1343.0 B, free: 2004.6 MB)
+19/05/07 11:09:57 INFO SparkContext: Created broadcast 4 from broadcast at DAGScheduler.scala:1161
+19/05/07 11:09:57 INFO DAGScheduler: Submitting 1 missing tasks from ResultStage 3 (ParallelCollectionRDD[4] at parallelize at AppWorking.java:121) (first 15 tasks are for partitions Vector(0))
+19/05/07 11:09:57 INFO TaskSchedulerImpl: Adding task set 3.0 with 1 tasks
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 61
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 57
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 66
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 59
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 67
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 60
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 51
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 54
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 50
+19/05/07 11:09:59 INFO BlockManagerInfo: Removed broadcast_3_piece0 on 10.0.0.151:62366 in memory (size: 2.1 KB, free: 2004.6 MB)
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 62
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 55
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 72
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 71
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 68
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 69
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 53
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 52
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 70
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 63
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 74
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 65
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 64
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 73
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 58
+19/05/07 11:09:59 INFO ContextCleaner: Cleaned accumulator 56
+19/05/07 11:10:01 INFO MongoClientCache: Closing MongoClient: [3.14.69.242:27017]
+19/05/07 11:10:01 INFO connection: Closed connection [connectionId{localValue:4, serverValue:11}] to 3.14.69.242:27017 because the pool has been closed.
+19/05/07 11:10:07 WARN TaskSetManager: Stage 3 contains a task of very large size (104048 KB). The maximum recommended task size is 100 KB.
+19/05/07 11:10:07 INFO TaskSetManager: Starting task 0.0 in stage 3.0 (TID 7, localhost, executor driver, partition 0, PROCESS_LOCAL, 106545904 bytes)
+19/05/07 11:10:07 INFO Executor: Running task 0.0 in stage 3.0 (TID 7)
+19/05/07 11:10:25 INFO MemoryStore: Block taskresult_7 stored as bytes in memory (estimated size 102.1 MB, free 1902.5 MB)
+19/05/07 11:10:25 INFO BlockManagerInfo: Added taskresult_7 in memory on 10.0.0.151:62366 (size: 102.1 MB, free: 1902.5 MB)
+19/05/07 11:10:25 INFO Executor: Finished task 0.0 in stage 3.0 (TID 7). 107059594 bytes result sent via BlockManager)
+19/05/07 11:10:36 INFO TaskSetManager: Finished task 0.0 in stage 3.0 (TID 7) in 39272 ms on localhost (executor driver) (1/1)
+19/05/07 11:10:36 INFO BlockManagerInfo: Removed taskresult_7 on 10.0.0.151:62366 in memory (size: 102.1 MB, free: 2004.6 MB)
+19/05/07 11:10:36 INFO DAGScheduler: ResultStage 3 (collect at AppWorking.java:124) finished in 39.283 s
+19/05/07 11:10:36 INFO DAGScheduler: Job 2 finished: collect at AppWorking.java:124, took 39.288847 s
+19/05/07 11:10:36 INFO TaskSchedulerImpl: Removed TaskSet 3.0, whose tasks have all completed, from pool 
+Total time to sort and rank ------------- :226
+19/05/07 11:10:36 INFO SparkUI: Stopped Spark web UI at http://10.0.0.151:4040
+19/05/07 11:10:36 INFO MapOutputTrackerMasterEndpoint: MapOutputTrackerMasterEndpoint stopped!
+19/05/07 11:10:36 INFO MemoryStore: MemoryStore cleared
+19/05/07 11:10:36 INFO BlockManager: BlockManager stopped
+19/05/07 11:10:36 INFO BlockManagerMaster: BlockManagerMaster stopped
+19/05/07 11:10:36 INFO OutputCommitCoordinator$OutputCommitCoordinatorEndpoint: OutputCommitCoordinator stopped!
+19/05/07 11:10:36 INFO SparkContext: Successfully stopped SparkContext
+19/05/07 11:10:36 INFO ShutdownHookManager: Shutdown hook called
+19/05/07 11:10:36 INFO ShutdownHookManager: Deleting directory /private/var/folders/v6/zyq3_4l946zd3cxx_706q0jjcvztwd/T/spark-941563ff-5d10-42ef-a46b-53d5d23eb2ab
